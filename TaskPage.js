@@ -37,26 +37,6 @@ export default function TaskPage({ navigation, route, props }) {
             onChangeText={setTaskTitle}
           />
         </View>
-        <View style={styles.dateTimeContainer}>
-          <Text style={styles.label}>Deadline:</Text>
-          <DateTimePicker
-            testID="DeadlineDate"
-            timeZoneOffsetInMinutes={0}
-            value={date}
-            mode={dateMode}
-            is24Hour={true}
-            display="default"
-            onChange={(event, selectedDate) => {
-              const currentDate = selectedDate || date;
-              setDate(currentDate);
-              setDeadlineDate(currentDate);
-            }}
-          />
-        </View>
-
-        <View style={styles.inputContainer}>
-          <TextInput style={styles.NotesInput} placeholder="Notes" multiline={true} />
-        </View>
 
         <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
           <View style={{ flexDirection: "column" }}>
@@ -202,5 +182,26 @@ const styles = StyleSheet.create({
             display="default"
           />
           <Text style={styles.label}> hr : min</Text>
+        </View>
+
+        <View style={styles.inputContainer}>
+          <TextInput style={styles.NotesInput} placeholder="Notes" multiline={true} />
+        </View>
+
+        <View style={styles.dateTimeContainer}>
+          <Text style={styles.label}>Deadline:</Text>
+          <DateTimePicker
+            testID="DeadlineDate"
+            timeZoneOffsetInMinutes={0}
+            value={date}
+            mode={dateMode}
+            is24Hour={true}
+            display="default"
+            onChange={(event, selectedDate) => {
+              const currentDate = selectedDate || date;
+              setDate(currentDate);
+              setDeadlineDate(currentDate);
+            }}
+          />
         </View>
         */

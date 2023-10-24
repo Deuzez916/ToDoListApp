@@ -46,27 +46,6 @@ export default function CreateTasks({ navigation, route }) {
           />
         </View>
 
-        <View style={styles.dateTimeContainer}>
-          <Text style={styles.label}>Deadline:</Text>
-          <DateTimePicker
-            testID="deadline"
-            timeZoneOffsetInMinutes={0}
-            value={date}
-            mode={dateMode}
-            is24Hour={true}
-            display="default"
-            onDateChange={(selectedDate) => {
-              const currentDate = selectedDate || date;
-              setDate(currentDate);
-              setDeadlineDate(currentDate);
-            }}
-          />
-        </View>
-
-        <View style={styles.inputContainer}>
-          <TextInput style={styles.NotesInput} placeholder="Notes" multiline={true} />
-        </View>
-
         <View style={{ flexDirection: "column", marginTop: 10 }}>
           <MaterialIcons
             style={{ alignSelf: "center" }}
@@ -190,4 +169,25 @@ const styles = StyleSheet.create({
               setEstimatedTime(currentDate);
             }}
           />
+
+          <View style={styles.inputContainer}>
+          <TextInput style={styles.NotesInput} placeholder="Notes" multiline={true} />
+        </View>
+
+        <View style={styles.dateTimeContainer}>
+          <Text style={styles.label}>Deadline:</Text>
+          <DateTimePicker
+            testID="deadline"
+            timeZoneOffsetInMinutes={0}
+            value={date}
+            mode={dateMode}
+            is24Hour={true}
+            display="default"
+            onDateChange={(selectedDate) => {
+              const currentDate = selectedDate || date;
+              setDate(currentDate);
+              setDeadlineDate(currentDate);
+            }}
+          />
+        </View>
 */

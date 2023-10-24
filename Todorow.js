@@ -37,22 +37,6 @@ export default function Todorow(props, route) {
         {props.toDoInfo.Task}
       </Text>
 
-      <View style={rowstyles.estimatedDeadline}>
-        <Text
-          style={{
-            fontSize: 20,
-            fontWeight: "bold",
-            marginTop: 10,
-            marginBottom: 10,
-            marginRight: 10,
-            width: "50%",
-            textAlign: "center",
-          }}
-        >
-          {props.toDoInfo.Deadline}
-        </Text>
-      </View>
-
       <StatusBar style="auto" />
     </View>
   );
@@ -64,7 +48,7 @@ const rowstyles = StyleSheet.create({
     width: "90%",
     backgroundColor: "#ffd0a8",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: 'space-between',
     flexDirection: "row",
     borderRadius: 15,
     borderWidth: 2,
@@ -111,4 +95,20 @@ const rowstyles = StyleSheet.create({
 
 
       <Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 10, marginTop: 10 }}>2:30 hr:min</Text>
+
+      <View style={rowstyles.estimatedDeadline}>
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "bold",
+            marginTop: 10,
+            marginBottom: 10,
+            marginRight: 10,
+            width: "50%",
+            textAlign: "center",
+          }}
+        >
+          {props.toDoInfo.Deadline}
+        </Text>
+      </View>
       */
